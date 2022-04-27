@@ -46,3 +46,21 @@ awesomeBooks.onsubmit = (event) => {
   titleInput.value = ""
   authorInput.value = ""
 };
+const removeContenet = (event) => {
+  let eventId = event.target.id;
+  if (eventId.includes('remove')) {
+    //remove "remove" to find the name without space
+    let name = eventId = eventId.replace('remove', '');
+    //create divid
+    let divId = eventId = 'div' + eventId;
+    //remove the element from array , filter, for each element ,remove space compare with name        //
+    books = books.filter((book) => {
+      let nameFromArray = book.title.replace(/\s+/g, '');
+      return (nameFromArray !== name);
+    })
+    //update local storage based on new array
+    localStorage.setItem("books", JSON.stringify(books));
+    //remove element divid
+    document.getElementById(divId).remove();
+  }
+}
