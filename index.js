@@ -1,4 +1,5 @@
 import Books from './Books.js';
+
 const library = new Books(JSON.parse(localStorage.getItem('books')));
 window.addEventListener('DOMContentLoaded', () => {
   const awesomeBooks = document.getElementById('awesome-books');
@@ -23,6 +24,11 @@ window.addEventListener('DOMContentLoaded', () => {
     booksContainer.append(newBooksDiv);
   };
 
+  const displayBooks = (books) => {
+    booksContainer.innerHTML = '';
+    books.forEach(createNewBook);
+    localStorage.setItem('books', JSON.stringify(books));
+  };
   const booksListAction = (event) => {
     const eventId = event.target.id;
     if (eventId.includes('remove')) {
@@ -31,15 +37,10 @@ window.addEventListener('DOMContentLoaded', () => {
       displayBooks(library.getAll());
     }
   };
-  const displayBooks = (books) => {
-    booksContainer.innerHTML = '';
-    books.forEach(createNewBook);
-    localStorage.setItem('books', JSON.stringify(books));
-  }
   awesomeBooks.onsubmit = (event) => {
     event.preventDefault();
     library.add(titleInput.value, authorInput.value);
-    displayBooks(library.getAll())
+    displayBooks(library.getAll());
     titleInput.value = '';
     authorInput.value = '';
   };
