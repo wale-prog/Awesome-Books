@@ -1,72 +1,48 @@
-const awesomeBooks = document.getElementById('awesome-books');
-const booksContainer = document.querySelector('.new-books');
-const titleInput = document.querySelector('.title-input');
-const authorInput = document.querySelector('.author-input');
-let books = JSON.parse(localStorage.getItem('books')) || [];
-
-class AddBooks {
-    constructor(title, author) {
-        this.title = title;
-        this.author = author;
-    }
-}
-const addBooks = (title, author) => {
-    books.push({
-        title,
-        author,
-    });
-
-    localStorage.setItem('books', JSON.stringify(books));
-    return { title, author };
-};
-
-const createNewBook = ({ title, author }) => {
+import Books from './Books.js';
+const library = new Books(JSON.parse(localStorage.getItem('books')));
+window.addEventListener('DOMContentLoaded', () => {
+  const awesomeBooks = document.getElementById('awesome-books');
+  const booksContainer = document.querySelector('.new-books');
+  const titleInput = document.querySelector('.title-input');
+  const authorInput = document.querySelector('.author-input');
+  const createNewBook = ({ title, author }) => {
     const newBooksDiv = document.createElement('div');
     const newBookTitle = document.createElement('p');
     const newBookAuthor = document.createElement('p');
     const button = document.createElement('button');
-    const line = document.createElement('div');
     const titleNoSpace = title.replace(/\s+/g, '');
     const removeId = `remove${titleNoSpace}`;
     const divId = `div${titleNoSpace}`;
-
     newBooksDiv.setAttribute('id', divId);
     button.innerText = 'Remove';
     button.className = 'remove-btn';
     button.setAttribute('id', removeId);
     newBookTitle.innerText = `${title} by ${author}`;
     newBookAuthor.innerText = author;
-
     newBooksDiv.append(newBookTitle, button);
     booksContainer.append(newBooksDiv);
+  };
 
-};
-
-books.forEach(createNewBook);
-
-awesomeBooks.onsubmit = (event) => {
-    event.preventDefault();
-
-    const newBookEntry = addBooks(titleInput.value, authorInput.value);
-
-    createNewBook(newBookEntry);
-    titleInput.value = '';
-    authorInput.value = '';
-};
-const booksListAction = (event) => {
+  const booksListAction = (event) => {
     const eventId = event.target.id;
     if (eventId.includes('remove')) {
-        const bookTitle = eventId.replace('remove', '');
-        const divId = `div${bookTitle}`;
-        books = books.filter((book) => {
-            const newTitleFromArray = book.title.replace(/\s+/g, '');
-            return (newTitleFromArray !== bookTitle);
-        });
-        localStorage.setItem('books', JSON.stringify(books));
-        document.getElementById(divId).remove();
+      const bookTitle = eventId.replace('remove', '');
+      library.remove(bookTitle);
+      displayBooks(library.getAll());
     }
-};
-
-// window.addEventListener('DOMContentLoaded', () => {
-document.getElementById('top-books').addEventListener('click', booksListAction);
-// });
+  };
+  const displayBooks = (books) => {
+    booksContainer.innerHTML = '';
+    books.forEach(createNewBook);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+  awesomeBooks.onsubmit = (event) => {
+    event.preventDefault();
+    library.add(titleInput.value, authorInput.value);
+    displayBooks(library.getAll())
+    titleInput.value = '';
+    authorInput.value = '';
+  };
+  document.getElementById('top-books').addEventListener('click', booksListAction);
+  displayBooks(library.getAll());
+});
