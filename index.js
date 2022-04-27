@@ -49,7 +49,7 @@ const booksListAction = (event) => {
   const eventId = event.target.id;
   if (eventId.includes('remove')) {
     const bookTitle = eventId.replace('remove', '');
-    const divId = `div${eventId}`;
+    const divId = `div${bookTitle}`;
     books = books.filter((book) => {
       const newTitleFromArray = book.title.replace(/\s+/g, '');
       return (newTitleFromArray !== bookTitle);
