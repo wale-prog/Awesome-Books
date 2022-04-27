@@ -64,3 +64,7 @@ const removeContenet = (event) => {
     document.getElementById(divId).remove();
   }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('top-books').addEventListener('click', removeContenet);
+})
