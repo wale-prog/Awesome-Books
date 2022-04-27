@@ -3,10 +3,48 @@
   padding: 0;
 }
 
-body {
-  padding: 12px;
+.line {
+  border-bottom: 3px solid #000;
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  top: -24px;
 }
 
-.line {
-  padding: 12px 0;
+.remove-btn {
+  display: flex;
+  justify-content: end;
+}
+
+#top-books {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: solid #333 3px;
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
+#top-books h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#awesome-books {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new-books {
+  margin-bottom: 32px;
+}
+
+.new-books div {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-books div:nth-child(odd) {
+  background-color: #d3d3d3;
 }
