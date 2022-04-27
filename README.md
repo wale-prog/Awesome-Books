@@ -13,6 +13,7 @@
 
 - HTML
 - JavaScript
+
 This project built with the help of HTML and JavaScript you can see and use the cods by cloning this repo on your local machine by Git and GitHub.
 
 ## Getting Started
