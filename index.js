@@ -48,21 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
   displayBooks(library.getAll());
 });
 
-
-// const navContent = `<p>Awesome Books</p>
-// <ul class="nav-list">
-//   <li class="nav-list-item"><a href="#">List</a></li>
-//   <li class="nav-list-item"><a href="#">Add new</a></li>
-//   <li class="nav-list-item"><a href="#">Contact</a></li>
-// </ul>
-// `;
-// const navbarContent = document.createElement('div');
-// navbarContent.setAttribute("id", "navbar")
-// const navbar = document.getElementById('navbar')
-// const navbarhead = document.querySelector('.navbar')
-// navbarContent.innerHTML = navContent;
-// navbarhead.appendChild(navbarContent);
-
 const navList = document.querySelectorAll('.nav-list-item');
 
 
@@ -85,7 +70,7 @@ manageDate(datePara);
 
 const list = document.querySelector('.list');
 const addNew = document.querySelector('.add-new');
-
+const contact = document.getElementById('contact');
 
 for (let i = 0; i < navList.length; i += 1) {
   navList[i].addEventListener('click', (event) => {
