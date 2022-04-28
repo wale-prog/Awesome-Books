@@ -82,8 +82,12 @@ for (let i = 0; i < navList.length; i += 1) {
       list.classList.remove('hidden');
       addNew.classList.add('hidden')
       contact.classList.add('hidden')
+    } else if (event.target.innerText === "Contact") {
+      list.classList.add('hidden');
+      addNew.classList.add('hidden')
+      contact.classList.remove('hidden')
+      manageDate(datePara);
     }
-    manageDate(datePara);
   })
 }
 
