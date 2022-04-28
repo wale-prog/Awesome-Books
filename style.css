@@ -71,13 +71,6 @@
   margin: 12px auto 0 auto;
 }
 
-/* .navbar {
-  border: 3px solid #333;
-  width: 88%;
-  padding: 12px;
-  margin: 12px auto 0 auto;
-} */
-
 .nav-list {
   list-style: none;
   display: flex;
@@ -122,4 +115,26 @@
   justify-content: end;
   width: 88%;
   margin: 12px auto;
+}
+
+#contact {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contact ul {
+  margin-left: 48px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.main-container {
+  width: 50%;
+  margin: 0 auto;
 }
