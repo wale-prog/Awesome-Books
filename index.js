@@ -47,3 +47,21 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('top-books').addEventListener('click', booksListAction);
   displayBooks(library.getAll());
 });
+
+const navList = document.querySelectorAll('.nav-list-item');
+const list = document.querySelector('.list');
+const addNew = document.querySelector('.add-new')
+
+for (let i = 0; i < navList.length; i += 1) {
+  navList[i].addEventListener('click', (event) => {
+    if (event.target.innerText === `Add new`) {
+      list.classList.add('hidden');
+      addNew.classList.remove('hidden')
+    } else if (event.target.innerText === "List") {
+      list.classList.remove('hidden');
+      addNew.classList.add('hidden')
+    }
+
+  })
+}
+

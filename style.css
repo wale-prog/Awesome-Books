@@ -16,12 +16,18 @@
   justify-content: end;
 }
 
+.heading {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
 #top-books {
   width: 80%;
   margin: 0 auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   border: solid #333 3px;
-  padding-top: 4px;
+  /* padding-top: 4px; */
   padding-bottom: 12px;
 }
 
@@ -47,4 +53,39 @@
 
 .new-books div:nth-child(odd) {
   background-color: #d3d3d3;
+}
+
+#footer {
+  border: 3px solid #333;
+  width: 76.5%;
+  margin: 12px auto;
+  padding: 12px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #333;
+  width: 76.5%;
+  padding: 12px;
+  margin: 12px auto 0 auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  border-right: 2px solid #333;
+  margin-right: 4px;
+  padding-right: 4px;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
