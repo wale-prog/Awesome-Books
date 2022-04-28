@@ -16,13 +16,23 @@
   justify-content: end;
 }
 
+.heading {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
 #top-books {
   width: 80%;
   margin: 0 auto;
-  margin-top: 40px;
   border: solid #333 3px;
-  padding-top: 4px;
   padding-bottom: 12px;
+}
+
+.add-new h2 {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
 }
 
 #top-books h2 {
@@ -33,6 +43,8 @@
 #awesome-books {
   width: 50%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-books {
@@ -47,4 +59,83 @@
 
 .new-books div:nth-child(odd) {
   background-color: #d3d3d3;
+}
+
+#footer {
+  border: 3px solid #333;
+  width: 88%;
+  margin: 12px auto;
+  padding: 12px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #333;
+  width: 88%;
+  padding: 12px;
+  margin: 12px auto 0 auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  border-right: 2px solid #333;
+  margin-right: 4px;
+  padding-right: 4px;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.title-input,
+.author-input {
+  width: 98.5%;
+  height: 24px;
+  border: 3px solid #333;
+  margin-bottom: 12px;
+}
+
+.add-btn {
+  padding: 8px;
+  align-self: end;
+  width: 48px;
+  text-align: center;
+}
+
+.date-display {
+  display: flex;
+  justify-content: end;
+  width: 88%;
+  margin: 12px auto;
+}
+
+#contact {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contact ul {
+  margin-left: 48px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.main-container {
+  width: 50%;
+  margin: 48px auto 0 auto;
 }

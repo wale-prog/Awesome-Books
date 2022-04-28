@@ -47,3 +47,45 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('top-books').addEventListener('click', booksListAction);
   displayBooks(library.getAll());
 });
+
+const navList = document.querySelectorAll('.nav-list-item');
+
+const dateDisplay = document.querySelector('.date-display');
+const datePara = document.createElement('p');
+
+function manageDate(datePara) {
+  const date = new Date();
+  const myDay = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+  const dayOfWeek = date.getDay();
+  const dayOfMonth = date.getDate();
+  const year = date.getFullYear();
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const innerPara = `${myDay[dayOfWeek]} Apr ${dayOfMonth}, ${year} ${hour}:${minutes}`;
+  datePara.innerHTML = innerPara;
+  dateDisplay.appendChild(datePara);
+}
+manageDate(datePara);
+
+const list = document.querySelector('.list');
+const addNew = document.querySelector('.add-new');
+const contact = document.getElementById('contact');
+
+for (let i = 0; i < navList.length; i += 1) {
+  navList[i].addEventListener('click', (event) => {
+    if (event.target.innerText === 'Add new') {
+      list.classList.add('hidden');
+      addNew.classList.remove('hidden');
+      contact.classList.add('hidden');
+    } else if (event.target.innerText === 'List') {
+      list.classList.remove('hidden');
+      addNew.classList.add('hidden');
+      contact.classList.add('hidden');
+    } else if (event.target.innerText === 'Contact') {
+      list.classList.add('hidden');
+      addNew.classList.add('hidden');
+      contact.classList.remove('hidden');
+    }
+    manageDate(datePara);
+  });
+}
