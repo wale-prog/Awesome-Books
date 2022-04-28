@@ -25,9 +25,7 @@
 #top-books {
   width: 80%;
   margin: 0 auto;
-  /* margin-top: 40px; */
   border: solid #333 3px;
-  /* padding-top: 4px; */
   padding-bottom: 12px;
 }
 
@@ -39,6 +37,8 @@
 #awesome-books {
   width: 50%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-books {
@@ -57,7 +57,7 @@
 
 #footer {
   border: 3px solid #333;
-  width: 76.5%;
+  width: 88%;
   margin: 12px auto;
   padding: 12px;
 }
@@ -66,10 +66,17 @@
   display: flex;
   justify-content: space-between;
   border: 3px solid #333;
-  width: 76.5%;
+  width: 88%;
   padding: 12px;
   margin: 12px auto 0 auto;
 }
+
+/* .navbar {
+  border: 3px solid #333;
+  width: 88%;
+  padding: 12px;
+  margin: 12px auto 0 auto;
+} */
 
 .nav-list {
   list-style: none;
@@ -88,4 +95,31 @@
 
 .hidden {
   display: none;
+}
+
+.add-new h2 {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.title-input,
+.author-input {
+  width: 98.5%;
+  border: 3px solid #333;
+  margin-bottom: 12px;
+}
+
+.add-btn {
+  padding: 8px;
+  align-self: end;
+  width: 12%;
+  text-align: center;
+}
+
+.date-display {
+  display: flex;
+  justify-content: end;
+  width: 88%;
+  margin: 12px auto;
 }
