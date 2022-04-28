@@ -29,6 +29,12 @@
   padding-bottom: 12px;
 }
 
+.add-new h2 {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
 #top-books h2 {
   text-align: center;
   margin-bottom: 12px;
@@ -90,15 +96,10 @@
   display: none;
 }
 
-.add-new h2 {
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 48px;
-}
-
 .title-input,
 .author-input {
   width: 98.5%;
+  height: 24px;
   border: 3px solid #333;
   margin-bottom: 12px;
 }
@@ -106,7 +107,7 @@
 .add-btn {
   padding: 8px;
   align-self: end;
-  width: 12%;
+  width: 48px;
   text-align: center;
 }
 
@@ -136,5 +137,5 @@
 
 .main-container {
   width: 50%;
-  margin: 0 auto;
+  margin: 48px auto 0 auto;
 }

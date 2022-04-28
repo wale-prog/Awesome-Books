@@ -2,56 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Awesome Books</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Awesome Books</title>
 </head>
 
 <body>
-  <nav id="navbar">
-    <p>Awesome Books</p>
-    <ul class="nav-list">
-      <li class="nav-list-item"><a href="#">List</a></li>
-      <li class="nav-list-item"><a href="#">Add new</a></li>
-      <li class="nav-list-item"><a href="#">Contact</a></li>
-    </ul>
+    <div class="main-container">
+        <nav id="navbar">
+            <p>Awesome Books</p>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#">List</a></li>
+                <li class="nav-list-item"><a href="#">Add new</a></li>
+                <li class="nav-list-item"><a href="#">Contact</a></li>
+            </ul>
 
-  </nav>
-  <div class="date-display"></div>
-  <div class="list">
-    <header class="heading">
-      <h2>All awesome books </h2>
-    </header>
-    <section id="top-books">
-      <div class="new-books"></div>
-    </section>
-  </div>
+        </nav>
+        <div class="date-display"></div>
+        <div class="list">
+            <header class="heading">
+                <h2>All awesome books </h2>
+            </header>
+            <section id="top-books">
+                <div class="new-books"></div>
+            </section>
+        </div>
 
-  <section class="add-new hidden">
-    <h2>Add a new book</h2>
-    <form id="awesome-books">
-      <input type="text" required placeholder="Title" name="title" class="title-input"> <br>
-      <input type="text" required name="author" placeholder="Author" class="author-input"> <br>
-      <button class="add-btn" type="submit">Add</button>
-    </form>
-  </section>
-  <section id="contact" class="hidden">
-    <h2>Contact information</h2>
-    <p>Do you have any questions or inquiries or just want to say "Hello"? <br> You can reach out to us!</p>
-    <ul>
-      <li>Our e-mail: <a href="mailto:ahmadzamiryousofi1397@gmail.com">ahmadzamiryousufi</a> and <a href="mailto:olapetanwale@outlook.com">Wale olapetan</a></li>
-      <li>our phone number: +93700516248, +2348032415315</li>
-      <li>Our address: Reddington Avenue 42, 100321, Lagos, Nigeria</li>
-    </ul>
-  </section>
+        <section class="add-new hidden">
+            <h2>Add a new book</h2>
+            <form id="awesome-books">
+                <input type="text" required placeholder="Title" name="title" class="title-input"> <br>
+                <input type="text" required name="author" placeholder="Author" class="author-input"> <br>
+                <button class="add-btn" type="submit">Add</button>
+            </form>
+        </section>
 
-  <footer id="footer">
-    <p>copyright &copy Wale et Zamir, 2022 </p>
-  </footer>
+        <section id="contact" class="hidden">
+            <h2>Contact information</h2>
+            <p>Do you have any questions or inquiries or just want to say "Hello"? <br> You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail: <a href="mailto:ahmadzamiryousofi1397@gmail.com">ahmadzamiryousufi</a> and <a
+                        href="mailto:olapetanwale@outlook.com">Wale olapetan</a></li>
+                <li>our phone number: 0062763528187263</li>
+                <li>Our address: Reddington Avenue 42, 100321, Lagos, Nigeria</li>
+            </ul>
+        </section>
 
-  <script src="index.js" type="module"></script>
+        <footer id="footer">
+            <p>Copyright &copy; Wale et Zamir, 2022 </p>
+        </footer>
+    </div>
+
+
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
